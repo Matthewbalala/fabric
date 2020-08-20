@@ -7,6 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 package tests
 
 import (
+	"crypto/sha256"
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric-protos-go/common"
 	"github.com/hyperledger/fabric-protos-go/ledger/rwset"
@@ -40,11 +41,6 @@ type txAndPvtdata struct {
 }
 
 //go:generate counterfeiter -o fakes/signer.go --fake-name Signer . signer
-
-type signer interface {
-	Sign(msg []byte) ([]byte, error)
-	Serialize() ([]byte, error)
-}
 
 func convertToCollConfigProtoBytes(collConfs []*collConf) ([]byte, error) {
 	var protoConfArray []*protopeer.CollectionConfig
@@ -165,6 +161,7 @@ func constructUnsignedTxEnv(
 				},
 			},
 			ss,
+			sha256.New(),
 		)
 		if err != nil {
 			return nil, "", err
@@ -202,6 +199,7 @@ func constructUnsignedTxEnv(
 		nil,
 		ccid,
 		sigID,
+		sha256.New(),
 	)
 	if err != nil {
 		return nil, "", err

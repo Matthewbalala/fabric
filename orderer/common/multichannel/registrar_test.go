@@ -137,7 +137,7 @@ func testMessageOrderAndRetrieval(maxMessageCount uint32, chainID string, chainS
 func TestConfigTx(t *testing.T) {
 	// system channel
 	confSys := genesisconfig.Load(genesisconfig.SampleInsecureSoloProfile, configtest.GetDevConfigDir())
-	genesisBlockSys := encoder.New(confSys).GenesisBlock()
+	genesisBlockSys := encoder.New(confSys).GenesisBlock("testchannelid")
 
 	// Tests for a normal channel which contains 3 config transactions and other
 	// normal transactions to make sure the right one returned
@@ -170,7 +170,7 @@ func TestConfigTx(t *testing.T) {
 func TestNewRegistrar(t *testing.T) {
 	//system channel
 	confSys := genesisconfig.Load(genesisconfig.SampleInsecureSoloProfile, configtest.GetDevConfigDir())
-	genesisBlockSys := encoder.New(confSys).GenesisBlock()
+	genesisBlockSys := encoder.New(confSys).GenesisBlockForChannel("testchannelid")
 
 	cryptoProvider, err := sw.NewDefaultSecurityLevelWithKeystore(sw.NewDummyKeyStore())
 	require.NoError(t, err)
@@ -303,7 +303,7 @@ func TestNewRegistrarWithFileRepo(t *testing.T) {
 func TestCreateChain(t *testing.T) {
 	//system channel
 	confSys := genesisconfig.Load(genesisconfig.SampleInsecureSoloProfile, configtest.GetDevConfigDir())
-	genesisBlockSys := encoder.New(confSys).GenesisBlock()
+	genesisBlockSys := encoder.New(confSys).GenesisBlockForChannel("testchannelid")
 
 	cryptoProvider, err := sw.NewDefaultSecurityLevelWithKeystore(sw.NewDummyKeyStore())
 	require.NoError(t, err)
@@ -528,7 +528,7 @@ func TestResourcesCheck(t *testing.T) {
 func TestBroadcastChannelSupport(t *testing.T) {
 	// system channel
 	confSys := genesisconfig.Load(genesisconfig.SampleInsecureSoloProfile, configtest.GetDevConfigDir())
-	genesisBlockSys := encoder.New(confSys).GenesisBlock()
+	genesisBlockSys := encoder.New(confSys).GenesisBlockForChannel("testchannelid")
 
 	cryptoProvider, err := sw.NewDefaultSecurityLevelWithKeystore(sw.NewDummyKeyStore())
 	require.NoError(t, err)

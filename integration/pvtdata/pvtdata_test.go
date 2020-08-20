@@ -9,6 +9,7 @@ package pvtdata
 import (
 	"bytes"
 	"context"
+	"crypto/sha256"
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
@@ -1604,7 +1605,7 @@ func createHeader(txType cb.HeaderType, channelID string, creator []byte) (*cb.H
 	chdr := &cb.ChannelHeader{
 		Type:      int32(txType),
 		ChannelId: channelID,
-		TxId:      protoutil.ComputeTxID(nonce, creator),
+		TxId:      protoutil.ComputeTxID(nonce, creator, sha256.New()),
 		Epoch:     0,
 		Timestamp: ts,
 	}
