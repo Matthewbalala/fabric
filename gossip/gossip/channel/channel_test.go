@@ -40,7 +40,7 @@ type msgMutator func(message *proto.Envelope)
 
 var shortenedWaitTime = time.Millisecond * 300
 var conf = Config{
-	ID: "test",
+	ID:                          "test",
 	PublishStateInfoInterval:    time.Millisecond * 100,
 	MaxBlockCountToStore:        100,
 	PullPeerNum:                 3,
