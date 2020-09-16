@@ -9,6 +9,7 @@ package valimpl
 import (
 	"bytes"
 	"fmt"
+
 	"github.com/hyperledger/fabric/fastfabric/cached"
 	// "github.com/hyperledger/fabric/fastfabric/config"
 

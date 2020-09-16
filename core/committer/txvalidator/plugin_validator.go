@@ -8,8 +8,9 @@ package txvalidator
 
 import (
 	"fmt"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"sync"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/hyperledger/fabric/common/cauthdsl"
 	ledger2 "github.com/hyperledger/fabric/common/ledger"

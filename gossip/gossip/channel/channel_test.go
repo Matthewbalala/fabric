@@ -10,12 +10,13 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	common2 "github.com/hyperledger/fabric/protos/common"
 	"strings"
 	"sync"
 	"sync/atomic"
 	"testing"
 	"time"
+
+	common2 "github.com/hyperledger/fabric/protos/common"
 
 	gproto "github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/bccsp/factory"
@@ -39,7 +40,7 @@ type msgMutator func(message *proto.Envelope)
 
 var shortenedWaitTime = time.Millisecond * 300
 var conf = Config{
-	ID:                          "test",
+	ID: "test",
 	PublishStateInfoInterval:    time.Millisecond * 100,
 	MaxBlockCountToStore:        100,
 	PullPeerNum:                 3,

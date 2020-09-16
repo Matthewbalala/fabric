@@ -8,6 +8,7 @@ package ledger
 
 import (
 	"fmt"
+
 	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/golang/protobuf/proto"

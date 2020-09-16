@@ -17,9 +17,10 @@ limitations under the License.
 package fsblkstorage
 
 import (
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"os"
 	"testing"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/hyperledger/fabric/common/ledger/testutil"
 	"github.com/hyperledger/fabric/common/ledger/util"

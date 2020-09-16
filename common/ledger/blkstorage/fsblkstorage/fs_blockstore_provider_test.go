@@ -18,8 +18,9 @@ package fsblkstorage
 
 import (
 	"fmt"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"testing"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/hyperledger/fabric/common/ledger/blkstorage"
 	"github.com/hyperledger/fabric/common/ledger/testutil"

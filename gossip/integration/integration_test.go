@@ -8,11 +8,12 @@ package integration
 
 import (
 	"fmt"
-	common2 "github.com/hyperledger/fabric/protos/common"
 	"net"
 	"strings"
 	"testing"
 	"time"
+
+	common2 "github.com/hyperledger/fabric/protos/common"
 
 	"github.com/hyperledger/fabric/common/metrics/disabled"
 	"github.com/hyperledger/fabric/core/config/configtest"

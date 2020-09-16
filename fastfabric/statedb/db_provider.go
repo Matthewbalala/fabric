@@ -18,12 +18,13 @@ package statedb
 
 import (
 	"fmt"
+	"sync"
+
 	"github.com/hyperledger/fabric/common/ledger/util/leveldbhelper"
 	"github.com/hyperledger/fabric/fastfabric/config"
 	"github.com/op/go-logging"
 	"github.com/pkg/errors"
 	"github.com/syndtr/goleveldb/leveldb/iterator"
-	"sync"
 )
 
 var logger = logging.MustGetLogger("dbhelper")

@@ -10,10 +10,11 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	common2 "github.com/hyperledger/fabric/protos/common"
 	"strings"
 	"testing"
 	"time"
+
+	common2 "github.com/hyperledger/fabric/protos/common"
 
 	"github.com/hyperledger/fabric/gossip/api"
 	"github.com/hyperledger/fabric/gossip/common"

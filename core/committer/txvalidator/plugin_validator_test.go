@@ -7,9 +7,10 @@ SPDX-License-Identifier: Apache-2.0
 package txvalidator_test
 
 import (
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"reflect"
 	"testing"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/common/cauthdsl"

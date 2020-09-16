@@ -8,6 +8,7 @@ package state
 
 import (
 	"bytes"
+
 	"github.com/hyperledger/fabric/fastfabric/cached"
 	// "github.com/hyperledger/fabric/fastfabric/config"
 	"sync"

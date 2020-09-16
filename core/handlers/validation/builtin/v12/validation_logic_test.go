@@ -10,10 +10,11 @@ import (
 	"bytes"
 	"compress/gzip"
 	"fmt"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"io/ioutil"
 	"os"
 	"testing"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/common/capabilities"
@@ -465,7 +466,7 @@ func TestInvoke(t *testing.T) {
 func TestRWSetTooBig(t *testing.T) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv:   &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{}},
 	}).NewSystemChaincodeProvider().(*scc.MocksccProviderImpl)
@@ -526,7 +527,7 @@ func TestRWSetTooBig(t *testing.T) {
 func TestValidateDeployFail(t *testing.T) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv:   &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{}},
 	}).NewSystemChaincodeProvider().(*scc.MocksccProviderImpl)
@@ -793,7 +794,7 @@ func TestValidateDeployFail(t *testing.T) {
 func TestAlreadyDeployed(t *testing.T) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv:   &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{}},
 	}).NewSystemChaincodeProvider().(*scc.MocksccProviderImpl)
@@ -887,7 +888,7 @@ func TestValidateDeployNoLedger(t *testing.T) {
 func TestValidateDeployNOKNilChaincodeSpec(t *testing.T) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv:   &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{}},
 	}).NewSystemChaincodeProvider().(*scc.MocksccProviderImpl)
@@ -947,7 +948,7 @@ func TestValidateDeployNOKNilChaincodeSpec(t *testing.T) {
 func TestValidateDeployOK(t *testing.T) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv:   &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{}},
 	}).NewSystemChaincodeProvider().(*scc.MocksccProviderImpl)
@@ -1006,7 +1007,7 @@ func TestValidateDeployNOK(t *testing.T) {
 	// create validator and policy
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv:   &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{}},
 	}).NewSystemChaincodeProvider().(*scc.MocksccProviderImpl)
@@ -1050,7 +1051,7 @@ func testChaincodeDeployNOK(t *testing.T, ccName, ccVersion, errMsg string, v *V
 func TestValidateDeployWithCollection(t *testing.T) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv: &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{
 			PrivateChannelDataRv: true,
@@ -1147,7 +1148,7 @@ func TestValidateDeployWithCollection(t *testing.T) {
 	// Test 3: Once the V1_2Validation is enabled, validation should fail due to duplicate collection configs
 	state = make(map[string]map[string][]byte)
 	mp = (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv: &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{
 			PrivateChannelDataRv: true,
@@ -1174,7 +1175,7 @@ func TestValidateDeployWithCollection(t *testing.T) {
 func TestValidateDeployWithPolicies(t *testing.T) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv:   &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{}},
 	}).NewSystemChaincodeProvider().(*scc.MocksccProviderImpl)
@@ -1247,7 +1248,7 @@ func TestValidateDeployWithPolicies(t *testing.T) {
 func TestInvalidUpgrade(t *testing.T) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv:   &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{}},
 	}).NewSystemChaincodeProvider().(*scc.MocksccProviderImpl)
@@ -1289,7 +1290,7 @@ func TestInvalidUpgrade(t *testing.T) {
 func TestValidateUpgradeOK(t *testing.T) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv:   &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{}},
 	}).NewSystemChaincodeProvider().(*scc.MocksccProviderImpl)
@@ -1352,7 +1353,7 @@ func TestValidateUpgradeOK(t *testing.T) {
 func TestInvalidateUpgradeBadVersion(t *testing.T) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv:   &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{}},
 	}).NewSystemChaincodeProvider().(*scc.MocksccProviderImpl)
@@ -1413,7 +1414,7 @@ func TestInvalidateUpgradeBadVersion(t *testing.T) {
 func validateUpgradeWithCollection(t *testing.T, ccver string, V1_2Validation bool) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv: &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{
 			PrivateChannelDataRv: true,
@@ -1608,7 +1609,7 @@ func TestValidateUpgradeWithCollection(t *testing.T) {
 func TestValidateUpgradeWithPoliciesOK(t *testing.T) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv:   &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{}},
 	}).NewSystemChaincodeProvider().(*scc.MocksccProviderImpl)
@@ -1688,7 +1689,7 @@ func TestValidateUpgradeWithNewFailAllIP(t *testing.T) {
 func validateUpgradeWithNewFailAllIP(t *testing.T, ccver string, v11capability, expecterr bool) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv:   &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{V1_1ValidationRv: v11capability}},
 	}).NewSystemChaincodeProvider().(*scc.MocksccProviderImpl)
@@ -1772,7 +1773,7 @@ func validateUpgradeWithNewFailAllIP(t *testing.T, ccver string, v11capability, 
 func TestValidateUpgradeWithPoliciesFail(t *testing.T) {
 	state := make(map[string]map[string][]byte)
 	mp := (&scc.MocksccProviderFactory{
-		Qe:                    lm.NewMockQueryExecutor(state),
+		Qe: lm.NewMockQueryExecutor(state),
 		ApplicationConfigBool: true,
 		ApplicationConfigRv:   &mc.MockApplication{CapabilitiesRv: &mc.MockApplicationCapabilities{}},
 	}).NewSystemChaincodeProvider().(*scc.MocksccProviderImpl)

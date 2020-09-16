@@ -7,8 +7,9 @@ package lockbasedtxmgr
 
 import (
 	"bytes"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"sync"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/common/flogging"

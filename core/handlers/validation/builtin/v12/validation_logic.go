@@ -9,8 +9,9 @@ package v12
 import (
 	"bytes"
 	"fmt"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"regexp"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/common/channelconfig"

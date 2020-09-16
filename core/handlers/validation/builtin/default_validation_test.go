@@ -7,8 +7,9 @@ SPDX-License-Identifier: Apache-2.0
 package builtin
 
 import (
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"testing"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	commonerrors "github.com/hyperledger/fabric/common/errors"
 	"github.com/hyperledger/fabric/core/committer/txvalidator"

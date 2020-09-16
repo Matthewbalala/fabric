@@ -7,8 +7,9 @@ SPDX-License-Identifier: Apache-2.0
 package tests
 
 import (
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"testing"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/golang/protobuf/proto"

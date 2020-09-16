@@ -10,10 +10,12 @@ import (
 	"bytes"
 	"encoding/hex"
 	"fmt"
+
 	"github.com/hyperledger/fabric/fastfabric/cached"
 	// "github.com/hyperledger/fabric/fastfabric/config"
-	"github.com/hyperledger/fabric/fastfabric/stopwatch"
 	"time"
+
+	"github.com/hyperledger/fabric/fastfabric/stopwatch"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/common/channelconfig"
@@ -724,9 +726,9 @@ func (c *coordinator) listMissingPrivateData(block *cached.Block, ownedRWsets ma
 	}
 
 	privateInfo := &privateDataInfo{
-		sources:                 sources,
-		missingKeysByTxIDs:      missing,
-		txns:                    txList,
+		sources:            sources,
+		missingKeysByTxIDs: missing,
+		txns:               txList,
 		missingRWSButIneligible: bi.missingRWSButIneligible,
 	}
 

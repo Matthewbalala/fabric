@@ -9,8 +9,9 @@ package gossip
 import (
 	"bytes"
 	"fmt"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"time"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/hyperledger/fabric/bccsp"
 	"github.com/hyperledger/fabric/bccsp/factory"

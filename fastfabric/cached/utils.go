@@ -2,6 +2,7 @@ package cached
 
 import (
 	"fmt"
+
 	"github.com/hyperledger/fabric/protos/common"
 )
 

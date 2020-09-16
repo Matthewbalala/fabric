@@ -7,8 +7,9 @@ SPDX-License-Identifier: Apache-2.0
 package mock
 
 import (
-	common2 "github.com/hyperledger/fabric/protos/common"
 	"testing"
+
+	common2 "github.com/hyperledger/fabric/protos/common"
 
 	"github.com/hyperledger/fabric/gossip/comm"
 	"github.com/hyperledger/fabric/gossip/common"

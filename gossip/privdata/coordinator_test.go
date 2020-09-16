@@ -11,10 +11,11 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"reflect"
 	"testing"
 	"time"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	pb "github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/bccsp/factory"

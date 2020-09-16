@@ -19,8 +19,9 @@ package gossip
 import (
 	"errors"
 	"fmt"
-	common2 "github.com/hyperledger/fabric/protos/common"
 	"testing"
+
+	common2 "github.com/hyperledger/fabric/protos/common"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/gossip/common"

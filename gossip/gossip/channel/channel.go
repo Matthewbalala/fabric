@@ -9,6 +9,7 @@ package channel
 import (
 	"bytes"
 	"fmt"
+
 	"github.com/hyperledger/fabric/fastfabric/cached"
 	// "github.com/hyperledger/fabric/fastfabric/config"
 	"reflect"
@@ -199,8 +200,8 @@ func NewGossipChannel(pkiID common.PKIidType, org api.OrgIdentityType, mcs api.M
 		shouldGossipStateInfo:     int32(0),
 		stateInfoPublishScheduler: time.NewTicker(adapter.GetConf().PublishStateInfoInterval),
 		stateInfoRequestScheduler: time.NewTicker(adapter.GetConf().RequestStateInfoInterval),
-		orgs:                      []api.OrgIdentityType{},
-		chainID:                   chainID,
+		orgs:    []api.OrgIdentityType{},
+		chainID: chainID,
 	}
 
 	gc.memFilter = &membershipFilter{adapter: gc.Adapter, gossipChannel: gc}

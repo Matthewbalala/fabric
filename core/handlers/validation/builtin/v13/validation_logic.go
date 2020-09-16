@@ -8,8 +8,9 @@ package v13
 
 import (
 	"fmt"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"regexp"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	commonerrors "github.com/hyperledger/fabric/common/errors"
 	"github.com/hyperledger/fabric/common/flogging"

@@ -10,10 +10,11 @@ import (
 	"context"
 	"encoding/pem"
 	"fmt"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"sync"
 	"sync/atomic"
 	"time"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"code.cloudfoundry.org/clock"
 	"github.com/golang/protobuf/proto"

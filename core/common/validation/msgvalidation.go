@@ -18,6 +18,7 @@ package validation
 
 import (
 	"bytes"
+
 	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/golang/protobuf/proto"

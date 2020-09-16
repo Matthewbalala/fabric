@@ -9,12 +9,13 @@ package pull
 import (
 	"bytes"
 	"fmt"
-	"github.com/hyperledger/fabric/protos/common"
 	"strconv"
 	"sync"
 	"sync/atomic"
 	"testing"
 	"time"
+
+	"github.com/hyperledger/fabric/protos/common"
 
 	"github.com/hyperledger/fabric/gossip/comm"
 	"github.com/hyperledger/fabric/gossip/discovery"

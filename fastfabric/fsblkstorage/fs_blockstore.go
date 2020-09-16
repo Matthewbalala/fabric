@@ -3,13 +3,14 @@ package fsblkstorage
 import (
 	"bytes"
 	"context"
+	"sync"
+
 	"github.com/hyperledger/fabric/common/ledger"
 	coreLedger "github.com/hyperledger/fabric/core/ledger"
 	"github.com/hyperledger/fabric/fastfabric/remote"
 	"github.com/hyperledger/fabric/protos/common"
 	"github.com/hyperledger/fabric/protos/peer"
 	"github.com/pkg/errors"
-	"sync"
 )
 
 func newFsBlockStore(ledgerId string) *BlockStoreImpl {

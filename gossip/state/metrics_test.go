@@ -7,9 +7,10 @@ SPDX-License-Identifier: Apache-2.0
 package state
 
 import (
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"sync"
 	"testing"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/hyperledger/fabric/gossip/discovery"
 	"github.com/hyperledger/fabric/gossip/metrics"

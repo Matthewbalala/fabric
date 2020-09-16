@@ -13,7 +13,6 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"math/rand"
 	"net"
 	"os"
@@ -25,6 +24,8 @@ import (
 	"sync"
 	"testing"
 	"time"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/bccsp/factory"

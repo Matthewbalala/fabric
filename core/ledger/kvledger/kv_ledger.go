@@ -8,6 +8,7 @@ package kvledger
 
 import (
 	"fmt"
+
 	"github.com/hyperledger/fabric/fastfabric/cached"
 	// "github.com/hyperledger/fabric/fastfabric/config"
 	// ffgossip "github.com/hyperledger/fabric/fastfabric/gossip"

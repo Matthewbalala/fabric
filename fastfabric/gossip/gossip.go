@@ -1,8 +1,9 @@
 package gossip
 
 import (
-	"github.com/hyperledger/fabric/protos/gossip"
 	"sync"
+
+	"github.com/hyperledger/fabric/protos/gossip"
 )
 
 func GetQueue(blocknum uint64) chan *gossip.Payload {

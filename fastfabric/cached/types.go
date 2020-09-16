@@ -1,9 +1,10 @@
 package cached
 
 import (
+	"sync"
+
 	"github.com/hyperledger/fabric/protos/common"
 	"github.com/hyperledger/fabric/protos/peer"
-	"sync"
 )
 
 type Block struct {

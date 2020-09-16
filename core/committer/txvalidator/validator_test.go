@@ -9,11 +9,12 @@ package txvalidator_test
 import (
 	"errors"
 	"fmt"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"os"
 	"strconv"
 	"testing"
 	"time"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric/common/cauthdsl"

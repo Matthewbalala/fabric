@@ -10,7 +10,6 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	common2 "github.com/hyperledger/fabric/protos/common"
 	"math/rand"
 	"reflect"
 	"runtime"
@@ -20,6 +19,8 @@ import (
 	"sync/atomic"
 	"testing"
 	"time"
+
+	common2 "github.com/hyperledger/fabric/protos/common"
 
 	"github.com/hyperledger/fabric/bccsp/factory"
 	"github.com/hyperledger/fabric/common/metrics/disabled"

@@ -8,12 +8,13 @@ package state
 
 import (
 	"crypto/rand"
-	"github.com/hyperledger/fabric/fastfabric/cached"
-	"github.com/hyperledger/fabric/protos/common"
 	"sync"
 	"sync/atomic"
 	"testing"
 	"time"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
+	"github.com/hyperledger/fabric/protos/common"
 
 	"github.com/hyperledger/fabric/gossip/util"
 	"github.com/stretchr/testify/assert"

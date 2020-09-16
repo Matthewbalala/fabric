@@ -8,8 +8,9 @@ package statebased
 
 import (
 	"fmt"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"sync"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	commonerrors "github.com/hyperledger/fabric/common/errors"
 	"github.com/hyperledger/fabric/core/handlers/validation/api/policies"

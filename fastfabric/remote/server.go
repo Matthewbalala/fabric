@@ -3,13 +3,14 @@ package remote
 import (
 	"context"
 	"errors"
+	"net"
+
 	"github.com/hyperledger/fabric/common/flogging"
 	"github.com/hyperledger/fabric/common/ledger"
 	"github.com/hyperledger/fabric/common/ledger/blkstorage"
 	"github.com/hyperledger/fabric/fastfabric/config"
 	"github.com/hyperledger/fabric/protos/common"
 	"google.golang.org/grpc"
-	"net"
 )
 
 var remoteLogger = flogging.MustGetLogger("remote")

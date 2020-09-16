@@ -9,8 +9,9 @@ package txvalidator
 import (
 	"context"
 	"fmt"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"time"
+
+	"github.com/hyperledger/fabric/fastfabric/cached"
 
 	"github.com/hyperledger/fabric/common/channelconfig"
 	"github.com/hyperledger/fabric/common/configtx"

@@ -10,12 +10,13 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	proto "github.com/hyperledger/fabric/protos/common"
 	"runtime"
 	"sync"
 	"sync/atomic"
 	"testing"
 	"time"
+
+	proto "github.com/hyperledger/fabric/protos/common"
 
 	"github.com/hyperledger/fabric/core/comm"
 	"github.com/hyperledger/fabric/core/deliverservice/blocksprovider"
