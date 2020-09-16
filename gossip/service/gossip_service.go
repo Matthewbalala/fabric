@@ -7,6 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 package service
 
 import (
+	"github.com/hyperledger/fabric/fastfabric/cached"
 	"fmt"
 	"sync"
 
@@ -27,7 +28,6 @@ import (
 	"github.com/hyperledger/fabric/gossip/state"
 	"github.com/hyperledger/fabric/gossip/util"
 	"github.com/hyperledger/fabric/protos/common"
-	gproto "github.com/hyperledger/fabric/protos/gossip"
 	"github.com/hyperledger/fabric/protos/transientstore"
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
@@ -53,7 +53,7 @@ type GossipService interface {
 	// InitializeChannel allocates the state provider and should be invoked once per channel per execution
 	InitializeChannel(chainID string, oac OrdererAddressConfig, support Support)
 	// AddPayload appends message payload to for given chain
-	AddPayload(chainID string, payload *gproto.Payload) error
+	AddPayload(chainID string, payload *cached.GossipPayload) error
 }
 
 // DeliveryServiceFactory factory to create and initialize delivery service instance
@@ -420,7 +420,7 @@ func (g *gossipServiceImpl) updateEndpoints(chainID string, criteria deliverclie
 }
 
 // AddPayload appends message payload to for given chain
-func (g *gossipServiceImpl) AddPayload(chainID string, payload *gproto.Payload) error {
+func (g *gossipServiceImpl) AddPayload(chainID string, payload *cached.GossipPayload) error {
 	g.lock.RLock()
 	defer g.lock.RUnlock()
 	return g.chains[chainID].AddPayload(payload)
