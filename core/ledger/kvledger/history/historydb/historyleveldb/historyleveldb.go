@@ -227,4 +227,3 @@ func (historyDB *historyDB) CommitLostBlock(blockAndPvtdata *ledger.BlockAndPvtD
 	}
 	return nil
 }
-

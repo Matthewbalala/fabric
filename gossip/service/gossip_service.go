@@ -7,8 +7,8 @@ SPDX-License-Identifier: Apache-2.0
 package service
 
 import (
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"fmt"
+	"github.com/hyperledger/fabric/fastfabric/cached"
 	"sync"
 
 	"github.com/hyperledger/fabric/common/metrics"

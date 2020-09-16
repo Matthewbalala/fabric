@@ -18,9 +18,9 @@ package fsblkstorage
 
 import (
 	"fmt"
+	"github.com/hyperledger/fabric/fastfabric/cached"
 	"io/ioutil"
 	"os"
-	"github.com/hyperledger/fabric/fastfabric/cached"
 	"testing"
 
 	"github.com/golang/protobuf/proto"

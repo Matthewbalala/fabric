@@ -174,13 +174,13 @@ func (c *coordinator) StoreBlock(block *cached.Block, privateDataSets util.PvtDa
 	logger.Debugf("[%s] Validating block [%d]", c.ChainID, block.Header.Number)
 
 	// if config.IsFastPeer || block.Header.Number <= 1 {
-		validationStart := time.Now()
-		err := c.Validator.Validate(block)
-		c.reportValidationDuration(time.Since(validationStart))
-		if err != nil {
-			logger.Errorf("Validation failed: %+v", err)
-			return err
-		}
+	validationStart := time.Now()
+	err := c.Validator.Validate(block)
+	c.reportValidationDuration(time.Since(validationStart))
+	if err != nil {
+		logger.Errorf("Validation failed: %+v", err)
+		return err
+	}
 	// }
 
 	blockAndPvtData := &ledger.BlockAndPvtData{

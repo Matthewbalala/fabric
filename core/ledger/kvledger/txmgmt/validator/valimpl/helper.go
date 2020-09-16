@@ -104,7 +104,7 @@ func preprocessProtoBlock(txMgr txmgr.TxMgr,
 	txsStatInfo := []*txmgr.TxStatInfo{}
 	// Committer validator has already set validation flags based on well formed tran checks
 	txsFilter := util.TxValidationFlags(block.Metadata.Metadata[common.BlockMetadataIndex_TRANSACTIONS_FILTER])
-	for txIndex, _ := range block.Data.Data {
+	for txIndex := range block.Data.Data {
 
 		var env *cached.Envelope
 		var chdr *cached.ChannelHeader
